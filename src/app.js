@@ -1,5 +1,7 @@
 const express = require("express");
 const bodyParser = require('body-parser');
+const cors = require('cors');
+const morgan = require('morgan');
 
 const app = express();
 const port = 3000;
@@ -8,6 +10,8 @@ const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors());
+app.use(morgan('combined'));
 
 app.get('/', (req, res) => {
     res.status(404);

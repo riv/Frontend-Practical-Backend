@@ -6,7 +6,7 @@ $ npm install ngrok -g
 
 2. start up the containers
 
-$ make build && make run
+$ make build && make up 
 
 3. share the connection with ngrok
 
